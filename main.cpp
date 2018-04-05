@@ -62,7 +62,7 @@ const payload_type   DEFAULTPAYLOADTYPE = payload_type::container;
 const double         DEFAULTSLEEPTIME = 1.;
 const std::size_t    DEFAULTCONTAINERSIZE = 1000;
 const std::size_t    DEFAULTNACCEPT = 10000;
-const unsigned short DEFAULTPORT = 10000;
+const unsigned short DEFAULTPORT = 5555;
 const std::size_t    DEFAULTFULLQUEUESLEEPMS = 5;
 const std::size_t    DEFAULTMAXQUEUESIZE = 5000;
 const std::string    DEFAULTHOST = "127.0.0.1"; // localhost // NOLINT
@@ -132,6 +132,9 @@ int main(int argc, char **argv) {
 			std::cout << desc << std::endl;
 			return 0;
 		}
+
+		is_client = true;
+		verbose_control_frames = true;
 
 		if (is_client) { // We are a client
 			// Use std::make_shared so shared_from_this works

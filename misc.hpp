@@ -77,7 +77,7 @@ enum class payload_command: ENUMBASETYPE {
   , NODATA = 1
   , COMPUTE = 2
   , RESULT = 3
-  , ERROR = 4
+  , ERRORR = 4
   , NONE = 5
 };
 
