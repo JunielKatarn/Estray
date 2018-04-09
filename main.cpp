@@ -133,9 +133,6 @@ int main(int argc, char **argv) {
 			return 0;
 		}
 
-		is_client = true;
-		verbose_control_frames = true;
-
 		if (is_client) { // We are a client
 			// Use std::make_shared so shared_from_this works
 			std::make_shared<async_websocket_client>(host, port, verbose_control_frames)->run();
